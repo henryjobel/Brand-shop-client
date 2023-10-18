@@ -1,5 +1,7 @@
+// eslint-disable-next-line no-unused-vars
 import React from 'react';
-import { NavLink } from 'react-router-dom';
+import { Link, NavLink } from 'react-router-dom';
+import navbarlogo from '../../../assets/Capture-removebg-preview (1).png'
 
 const navLinks =
     <>
@@ -13,7 +15,7 @@ const navLinks =
 const Navbar = () => {
     return (
         <div>
-            <div className="navbar bg-base-100">
+            <div className="navbar">
                 <div className="navbar-start">
                     <div className="dropdown">
                         <label tabIndex={0} className="btn btn-ghost lg:hidden">
@@ -23,15 +25,15 @@ const Navbar = () => {
                             {navLinks}
                         </ul>
                     </div>
-                    <a className="btn btn-ghost normal-case text-xl">daisyUI</a>
+                    <img className='w-[200px]' src={navbarlogo} alt="" />
                 </div>
-                <div className="navbar-center hidden lg:flex">
+                <div className="navbar-center hidden lg:flex text-8xl font-extrabold text-purple-400">
                     <ul className="menu menu-horizontal px-1">
                         {navLinks}
                     </ul>
                 </div>
                 <div className="navbar-end">
-                    <a className="btn">Button</a>
+                    <button className='btn btn-outline btn-secondary'><Link to='/login'>Login</Link></button>
                 </div>
             </div>
         </div>
