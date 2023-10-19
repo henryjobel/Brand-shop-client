@@ -7,6 +7,7 @@ import Login from "../Pages/Login/Login";
 import Register from "../Pages/Register/Register";
 import About from "../Pages/About";
 import Contact from "../Pages/Contact";
+import FeaturedCarsCard from "../Components/FeaturedVcles/FeaturedCarsCard";
 
 const routes = createBrowserRouter([
 
@@ -16,7 +17,8 @@ const routes = createBrowserRouter([
         children: [
             {
                 path: '/',
-                element:<Home></Home>
+                element:<Home></Home>,
+                loader: () => fetch('http://localhost:5000/cars')
             },
             {
                 path:'/addproduct',
