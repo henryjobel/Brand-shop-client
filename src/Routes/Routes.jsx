@@ -10,6 +10,7 @@ import Contact from "../Pages/Contact";
 import UpdateProduct from "../Pages/UpdateProduct/UpdateProduct";
 import Brands from "../Pages/Brands/Brands";
 import Details from "../Pages/Detailspage/Details";
+import FeaturedCarsCard from "../Components/FeaturedVcles/FeaturedCarsCard";
 
 const routes = createBrowserRouter([
 
@@ -24,7 +25,8 @@ const routes = createBrowserRouter([
             },
             {
                 path: '/details/:id',
-                element:<Details></Details>
+                element:<Details></Details>,
+                loader: ()=> fetch(`http://localhost:5000/cars`)
             },
             {
                 path:'/addproduct',
@@ -58,6 +60,11 @@ const routes = createBrowserRouter([
             {
                 path: '/brands',
                 element:<Brands></Brands>
+            },
+            {
+                path: '/feturedCars',
+                element:<FeaturedCarsCard></FeaturedCarsCard>,
+               
             }
         ]
     }

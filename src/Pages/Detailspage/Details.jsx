@@ -1,4 +1,5 @@
 import React from 'react';
+import FeaturedCarsCard from '../../Components/FeaturedVcles/FeaturedCarsCard';
 
 const Details = () => {
     return (
@@ -33,6 +34,7 @@ const Details = () => {
                     </div>
                 </div>
             </div>
+            <FeaturedCarsCard></FeaturedCarsCard>
         </div>
     );
 };
