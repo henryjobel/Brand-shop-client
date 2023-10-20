@@ -9,6 +9,7 @@ import About from "../Pages/About";
 import Contact from "../Pages/Contact";
 import UpdateProduct from "../Pages/UpdateProduct/UpdateProduct";
 import Brands from "../Pages/Brands/Brands";
+import Details from "../Pages/Detailspage/Details";
 
 const routes = createBrowserRouter([
 
@@ -20,6 +21,10 @@ const routes = createBrowserRouter([
                 path: '/',
                 element:<Home></Home>,
                 loader: () => fetch('http://localhost:5000/brand')
+            },
+            {
+                path: '/details/:id',
+                element:<Details></Details>
             },
             {
                 path:'/addproduct',
