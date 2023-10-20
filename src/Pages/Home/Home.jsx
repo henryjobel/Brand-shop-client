@@ -1,7 +1,7 @@
 import React from 'react';
 import Banner from '../../Components/Banner/Banner';
 import Fetured from '../../Components/FeaturedVcles/Fetured';
-import FeaturedCarsCard from '../../Components/FeaturedVcles/FeaturedCarsCard';
+import BrandsOnmap from '../Brands/BrandsOnmap';
 
 
 const Home = () => {
@@ -11,7 +11,7 @@ const Home = () => {
             <div className='mt-80'>
             <Fetured></Fetured>
             </div>
-            <FeaturedCarsCard></FeaturedCarsCard>
+            <BrandsOnmap></BrandsOnmap>
         </div>
     );
 };

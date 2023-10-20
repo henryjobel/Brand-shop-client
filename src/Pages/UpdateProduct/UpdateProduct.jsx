@@ -1,50 +1,49 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
 import Swal from 'sweetalert2';
 
-const handleAddProduct = event =>{
-    event.preventDefault();
-
-    const form = event.target;
-    const name = form.name.value
-    const brandname = form.brandname.value
-    const category = form.category.value
-    const price = form.price.value
-    const shortdes = form.shortdes.value
-    const rating = form.rating.value
-    const photo = form.photo.value
-    const brandimage = form.brandimage.value
-    const newCars = {name,brandname,category,price,shortdes,rating,photo,brandimage}
-    console.log(newCars)
-
-    fetch('http://localhost:5000/cars', {
-            method: 'POST',
-            headers: {
-                'content-type': 'application/json'
-            },
-            body: JSON.stringify(newCars)
-    })
-    .then(res => res.json())
-    .then(data => {
-        console.log(data);
-        if(data.insertedId){
-            Swal.fire({
-                position: 'top-end',
-                icon: 'success',
-                title: 'Add Product Sucessfully',
-                showConfirmButton: false,
-                timer: 1500
-              })
-        }
-    })
-}
-
-const AddProduct = () => {
+const UpdateProduct = () => {
+    const handleAddProduct = event =>{
+        event.preventDefault();
+    
+        const form = event.target;
+        const name = form.name.value
+        const brandname = form.brandname.value
+        const category = form.category.value
+        const price = form.price.value
+        const shortdes = form.shortdes.value
+        const rating = form.rating.value
+        const photo = form.photo.value
+        const brandimage = form.brandimage.value
+        const newCars = {name,brandname,category,price,shortdes,rating,photo,brandimage}
+        console.log(newCars)
+    
+        fetch('http://localhost:5000/cars', {
+                method: 'POST',
+                headers: {
+                    'content-type': 'application/json'
+                },
+                body: JSON.stringify(newCars)
+        })
+        .then(res => res.json())
+        .then(data => {
+            console.log(data);
+            if(data.insertedId){
+                Swal.fire({
+                    position: 'top-end',
+                    icon: 'success',
+                    title: 'Add Product Sucessfully',
+                    showConfirmButton: false,
+                    timer: 1500
+                  })
+            }
+        })
+    }
     return (
-        <div className="hero min-h-screen text-purple-300" style={{ backgroundImage: 'url(https://i.ibb.co/Q81sk6Z/brand-new-car-ai-generated-image-268835-5688.jpg)' }}>
+        <div>
+            <div className="hero min-h-screen text-purple-300" style={{ backgroundImage: 'url(https://i.ibb.co/Q81sk6Z/brand-new-car-ai-generated-image-268835-5688.jpg)' }}>
             <div className="hero-overlay bg-opacity-60"></div>
             <div className=" p-24">
-                <h2 className="text-5xl font-bold text-center pb-6">Add a Product</h2>
+                <h2 className="text-5xl font-bold text-center pb-6">Update Your Product</h2>
                 <form onSubmit={handleAddProduct}>
                    
                     <div className="md:flex mb-8">
@@ -127,10 +126,10 @@ const AddProduct = () => {
                     <input type="submit" value="Add Product" className="btn btn-outline btn-secondary" />
 
                 </form>
-                <h1 className='text-center text-3xl font-bold my-4 text-purple-300'>if You want update your Product <Link  className='text-blue-700 font-bold' to='/update'>Update</Link></h1>
             </div>
+        </div>
         </div>
     );
 };
 
-export default AddProduct;
+export default UpdateProduct;
