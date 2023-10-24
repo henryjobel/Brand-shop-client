@@ -1,8 +1,10 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 
 const CarsCard = ({ car }) => {
 
-    const {name,brandname,category,price,shortdes,rating,photo,brandimage} = car
+    const {_id,name,brandname,category,price,shortdes,rating,photo,brandimage} = car
+
 
     return (
         <div>
@@ -13,6 +15,8 @@ const CarsCard = ({ car }) => {
                     <p>{shortdes}</p>
                     <div className="card-actions justify-end">
                         <button className="btn btn-primary">Buy Now</button>
+                        <Link to={`/update/${_id}`}>
+                        <button className="btn btn-primary">Update</button></Link>
                     </div>
                 </div>
             </div>

@@ -1,8 +1,13 @@
 import React from 'react';
+import { useLoaderData } from 'react-router-dom';
 import Swal from 'sweetalert2';
 
 const UpdateProduct = () => {
-    const handleAddProduct = event =>{
+
+    const cars = useLoaderData()
+    const {_id,name,brandname,category,price,shortdes,rating,photo,brandimage} = cars
+
+    const handleUpdateProduct = event =>{
         event.preventDefault();
     
         const form = event.target;
@@ -17,8 +22,8 @@ const UpdateProduct = () => {
         const newCars = {name,brandname,category,price,shortdes,rating,photo,brandimage}
         console.log(newCars)
     
-        fetch('http://localhost:5000/cars', {
-                method: 'POST',
+        fetch(`http://localhost:5000/cars/${_id}`, {
+                method: 'PUT',
                 headers: {
                     'content-type': 'application/json'
                 },
@@ -27,11 +32,11 @@ const UpdateProduct = () => {
         .then(res => res.json())
         .then(data => {
             console.log(data);
-            if(data.insertedId){
+            if(data.modifiedcount> 0){
                 Swal.fire({
                     position: 'top-end',
                     icon: 'success',
-                    title: 'Add Product Sucessfully',
+                    title: 'Update Product Sucessfully',
                     showConfirmButton: false,
                     timer: 1500
                   })
@@ -43,8 +48,8 @@ const UpdateProduct = () => {
             <div className="hero min-h-screen text-purple-300" style={{ backgroundImage: 'url(https://i.ibb.co/Q81sk6Z/brand-new-car-ai-generated-image-268835-5688.jpg)' }}>
             <div className="hero-overlay bg-opacity-60"></div>
             <div className=" p-24">
-                <h2 className="text-5xl font-bold text-center pb-6">Update Your Product</h2>
-                <form onSubmit={handleAddProduct}>
+                <h2 className="text-5xl font-bold text-center pb-6">Update Your {name}</h2>
+                <form onSubmit={handleUpdateProduct}>
                    
                     <div className="md:flex mb-8">
                         <div className="form-control md:w-1/2">
