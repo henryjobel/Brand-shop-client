@@ -2,7 +2,7 @@ import React from 'react';
 
 const Testimonial = () => {
     return (
-        <div className='grid grid-cols-3 gap-6 container mx-auto '>
+        <div className='lg:grid lg:grid-cols-3 gap-6 container mx-auto '>
 
             <div className="bg-gray-100 p-8 rounded-lg shadow-md max-w-md mx-auto">
                 <div className="flex items-center mb-4">

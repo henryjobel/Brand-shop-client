@@ -9,7 +9,7 @@ const Banner = () => {
                 <div className="hero-overlay bg-opacity-50"></div>
                 <img src="https://i.ibb.co/ZmWzjTs/Daco-1244842.png" alt="" />
                 <div className='mt-[800px]'>
-                <div className='grid grid-cols-3 max-w-7xl mx-auto bg-red-400 p-10 rounded-2xl text-white '>
+                <div className='lg:grid lg:grid-cols-3 max-w-7xl mx-auto bg-red-400 lg:p-10 rounded-2xl text-white '>
                 <div className='flex gap-6'>
                     <p className='text-6xl'><AiOutlineSetting></AiOutlineSetting></p>
                     <div>
