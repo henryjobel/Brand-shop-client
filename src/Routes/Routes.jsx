@@ -11,6 +11,7 @@ import UpdateProduct from "../Pages/UpdateProduct/UpdateProduct";
 import Brands from "../Pages/Brands/Brands";
 import Details from "../Pages/Detailspage/Details";
 import FeaturedCarsCard from "../Components/FeaturedVcles/FeaturedCarsCard";
+import CarsDetails from "../Pages/CarsDetails/CarsDetails";
 
 const routes = createBrowserRouter([
 
@@ -65,8 +66,13 @@ const routes = createBrowserRouter([
                 path: '/feturedCars',
                 element:<FeaturedCarsCard></FeaturedCarsCard>,
                
+            },
+            {
+                path: '/carsdetail/:id',
+                element:<CarsDetails></CarsDetails>,
             }
         ]
+
     }
 ]);
 

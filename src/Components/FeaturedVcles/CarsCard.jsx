@@ -14,7 +14,7 @@ const CarsCard = ({ car }) => {
                     <h2 className="card-title">{name}</h2>
                     <p>{shortdes}</p>
                     <div className="card-actions justify-end">
-                        <button className="btn btn-primary">Buy Now</button>
+                        <Link to={`/carsdetail/${_id}`}><button className="btn btn-primary">Get More Info</button></Link>
                         <Link to={`/update/${_id}`}>
                         <button className="btn btn-primary">Update</button></Link>
                     </div>
