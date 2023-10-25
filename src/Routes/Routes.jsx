@@ -22,33 +22,33 @@ const routes = createBrowserRouter([
         children: [
             {
                 path: '/',
-                element:<Home></Home>,
-                loader: () => fetch('http://localhost:5000/brand')
+                element: <Home></Home>,
+                loader: () => fetch('https://brand-shop-server-kayrq3whi-henryjobels-projects.vercel.app/brand')
             },
             {
                 path: '/details/:id',
-                element:<PrivateRoutes><Details></Details></PrivateRoutes>,
-                loader: ()=> fetch(`http://localhost:5000/cars`)
+                element: <PrivateRoutes><Details></Details></PrivateRoutes>,
+                loader: () => fetch(`https://brand-shop-server-kayrq3whi-henryjobels-projects.vercel.app/cars`)
             },
             {
-                path:'/addproduct',
-                element:<PrivateRoutes><AddProduct></AddProduct></PrivateRoutes>
+                path: '/addproduct',
+                element: <PrivateRoutes><AddProduct></AddProduct></PrivateRoutes>
             },
             {
-                path:'/mycart',
-                element:<PrivateRoutes><MyCart></MyCart></PrivateRoutes>
+                path: '/mycart',
+                element: <PrivateRoutes><MyCart></MyCart></PrivateRoutes>
             },
             {
                 path: '/login',
-                element:<Login></Login>
+                element: <Login></Login>
             },
             {
                 path: 'Register',
-                element:<Register></Register>
+                element: <Register></Register>
             },
             {
                 path: '/about',
-                element:<About></About>
+                element: <About></About>
             },
             {
                 path: '/contactus',
@@ -56,21 +56,21 @@ const routes = createBrowserRouter([
             },
             {
                 path: '/update/:id',
-                element:<PrivateRoutes><UpdateProduct></UpdateProduct>,</PrivateRoutes>,
-                loader: ({params}) => fetch(`http://localhost:5000/cars/${params.id}`)
+                element: <PrivateRoutes><UpdateProduct></UpdateProduct>,</PrivateRoutes>,
+                loader: ({ params }) => fetch(`https://brand-shop-server-kayrq3whi-henryjobels-projects.vercel.app/cars/${params.id}`)
             },
             {
                 path: '/brands',
-                element:<Brands></Brands>
+                element: <Brands></Brands>
             },
             {
                 path: '/feturedCars',
-                element:<PrivateRoutes><FeaturedCarsCard></FeaturedCarsCard></PrivateRoutes>,
-               
+                element: <PrivateRoutes><FeaturedCarsCard></FeaturedCarsCard></PrivateRoutes>,
+
             },
             {
                 path: '/carsdetail/:id',
-                element:<PrivateRoutes><CarsDetails></CarsDetails></PrivateRoutes>,
+                element: <PrivateRoutes><CarsDetails></CarsDetails></PrivateRoutes>,
             }
         ]
 

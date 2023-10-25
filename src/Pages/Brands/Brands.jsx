@@ -8,7 +8,7 @@ const handlebrand = event =>{
     const brandname = form.brandname.value
    const newBrands = {brandimg,brandname}
 
-    fetch('http://localhost:5000/brand', {
+    fetch('https://brand-shop-server-kayrq3whi-henryjobels-projects.vercel.app//brand', {
             method: 'POST',
             headers: {
                 'content-type': 'application/json'

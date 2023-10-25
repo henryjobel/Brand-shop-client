@@ -7,7 +7,7 @@ const CarsDetails = () => {
     const [cart, setCart] = useState([]);
 
     useEffect(() => {
-        fetch(`http://localhost:5000/cars/${id}`)
+        fetch(`https://brand-shop-server-kayrq3whi-henryjobels-projects.vercel.app//cars/${id}`)
             .then(res => res.json())
             .then(data => setCar(data))
             .catch(error => console.error('Error:', error));
