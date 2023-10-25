@@ -12,6 +12,7 @@ import Brands from "../Pages/Brands/Brands";
 import Details from "../Pages/Detailspage/Details";
 import FeaturedCarsCard from "../Components/FeaturedVcles/FeaturedCarsCard";
 import CarsDetails from "../Pages/CarsDetails/CarsDetails";
+import PrivateRoutes from "./Privateroutes/PrivateRoutes";
 
 const routes = createBrowserRouter([
 
@@ -26,16 +27,16 @@ const routes = createBrowserRouter([
             },
             {
                 path: '/details/:id',
-                element:<Details></Details>,
+                element:<PrivateRoutes><Details></Details></PrivateRoutes>,
                 loader: ()=> fetch(`http://localhost:5000/cars`)
             },
             {
                 path:'/addproduct',
-                element:<AddProduct></AddProduct>
+                element:<PrivateRoutes><AddProduct></AddProduct></PrivateRoutes>
             },
             {
                 path:'/mycart',
-                element:<MyCart></MyCart>
+                element:<PrivateRoutes><MyCart></MyCart></PrivateRoutes>
             },
             {
                 path: '/login',
@@ -55,7 +56,7 @@ const routes = createBrowserRouter([
             },
             {
                 path: '/update/:id',
-                element:<UpdateProduct></UpdateProduct>,
+                element:<PrivateRoutes><UpdateProduct></UpdateProduct>,</PrivateRoutes>,
                 loader: ({params}) => fetch(`http://localhost:5000/cars/${params.id}`)
             },
             {
@@ -64,12 +65,12 @@ const routes = createBrowserRouter([
             },
             {
                 path: '/feturedCars',
-                element:<FeaturedCarsCard></FeaturedCarsCard>,
+                element:<PrivateRoutes><FeaturedCarsCard></FeaturedCarsCard></PrivateRoutes>,
                
             },
             {
                 path: '/carsdetail/:id',
-                element:<CarsDetails></CarsDetails>,
+                element:<PrivateRoutes><CarsDetails></CarsDetails></PrivateRoutes>,
             }
         ]
 
