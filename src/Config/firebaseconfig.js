@@ -4,13 +4,13 @@ import { initializeApp } from "firebase/app";
 
 
 const firebaseConfig = {
-    apiKey: "AIzaSyAGnpolMOWc7Hq2VDz39ptDvbncejNF2IA",
-    authDomain: "brandshop-e6e47.firebaseapp.com",
-    projectId: "brandshop-e6e47",
-    storageBucket: "brandshop-e6e47.appspot.com",
-    messagingSenderId: "17781684057",
-    appId: "1:17781684057:web:1cdd828497abb18afe7e48"
-  };
+  apiKey: "AIzaSyDbkHX0eCiebl2BuL0oIbLFi_CcTIa9cq8",
+  authDomain: "brandingshop-2ce09.firebaseapp.com",
+  projectId: "brandingshop-2ce09",
+  storageBucket: "brandingshop-2ce09.appspot.com",
+  messagingSenderId: "314673542899",
+  appId: "1:314673542899:web:1d63e9d91412c836f0a986"
+};
 
 
 const app = initializeApp(firebaseConfig);
