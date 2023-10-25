@@ -39,7 +39,7 @@ const Login = () => {
 
     return (
         <div className='text-red-500'>
-            <div className="hero min-h-screen" style={{ backgroundImage: 'url(https://www.madebydesignesia.com/themes/rockfest/images/background/t4.jpg)' }}>
+            <div className="hero min-h-screen" style={{ backgroundImage: 'url(https://i.ibb.co/sgNFTDZ/peter-broomfield-m3m-ln-R90u-M-unsplash.jpg)' }}>
                 <div className="hero-overlay bg-opacity-60"></div>
                 <div>
                     <h1 className='text-4xl text-red-600 font-extrabold my-10 text-center'>Login your account</h1>
